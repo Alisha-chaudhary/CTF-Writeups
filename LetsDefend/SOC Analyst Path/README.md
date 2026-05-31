@@ -19,11 +19,10 @@
   * [Module 7 — Common Mistakes by SOC Analysts](#module-7--common-mistakes-by-soc-analysts)
 * [Flags / Answers](#flags--answers)
 * [Key Takeaways](#key-takeaways)
-* [Screenshots](#screenshots)
 
 ---
 
-## 📌 Challenge Overview
+## Challenge Overview
 
 As part of my Blue Team learning journey, I completed the **SOC Analyst Learning Path** on LetsDefend. This path introduced me to the core concepts, workflows, and technologies used in a modern Security Operations Center (SOC).
 
@@ -44,7 +43,7 @@ The hands-on exercises helped me understand how analysts investigate alerts, val
 
 ---
 
-## 🧰 Tools Used
+## Tools Used
 
 | Tool                    | Purpose                                          |
 | ----------------------- | ------------------------------------------------ |
@@ -58,7 +57,7 @@ The hands-on exercises helped me understand how analysts investigate alerts, val
 
 ---
 
-## 🔍 Walkthrough
+## Walkthrough 
 
 ### Module 1 — Introduction to SOC
 
@@ -243,14 +242,14 @@ This module reinforced the importance of thorough validation and comprehensive i
 
 ---
 
-## 🚩 Flags / Answers
+## Flags / Answers
 
 | Module              | Question                                  | Answer                                                               |
 | ------------------- | ----------------------------------------- | -------------------------------------------------------------------- |
 | Introduction to SOC | Internal and external employees SOC model | `Co-Managed SOC`                                                     |
 | SIEM                | Closed alert channel                      | `Closed Alerts`                                                      |
 | Log Management      | Source IP for GitHub URL                  | `172.16.17.54`                                                       |
-| Log Management      | Log type lookup                           | `DNSr`                                                               |
+| Log Management      | Log type lookup                           | `DNS`                                                                |
 | EDR                 | Hostname running nmap hash                | `EricProd`                                                           |
 | EDR                 | Complete CMD command                      | `C:/Windows/System32/mshta.exe C:/Users/roberto/Desktop/Ps1.hta`     |
 | SOAR                | Tool used to conduct analysis             | `Playbook`                                                           |
@@ -258,7 +257,7 @@ This module reinforced the importance of thorough validation and comprehensive i
 
 ---
 
-## 💡 Key Takeaways
+## Key Takeaways
 
 Completing this learning path helped me understand how modern SOC environments operate and how analysts use different tools together during investigations.
 
