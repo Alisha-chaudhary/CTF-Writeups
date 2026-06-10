@@ -55,7 +55,7 @@ Email harvesting stood out to me as particularly dangerous here. An attacker who
 > **A:** `Email harvesting`
 
 📸 *Screenshot: OSINT Framework tool interface*  
-![OSINT Framework](TryHackMe/Cyber kill chain/Screenshots/01-recon-osint-framework.png)
+![OSINT Framework](Screenshots/01-recon-osint-framework.png)
 
 ---
 
@@ -81,7 +81,7 @@ The macro technique is particularly effective because Office documents feel rout
 > **A:** `Macro`
 
 📸 *Screenshot: Weaponization task completion*  
-![Weaponization](TryHackMe/Cyber kill chain/Screenshots/02-weaponization-macro.png)
+![Weaponization](Screenshots/02-weaponization-macro.png)
 
 ---
 
@@ -101,7 +101,7 @@ Successful watering hole attacks are built on meticulous research into where a t
 > **A:** `Watering hole attack`
 
 📸 *Screenshot: Delivery task completion*  
-![Delivery](TryHackMe/Cyber kill chain/Screenshots/03-delivery watering hole.png)
+![Delivery](Screenshots/03-delivery-watering-hole.png)
 
 ---
 
@@ -125,7 +125,7 @@ Zero-days are a reminder that not every threat arrives with a recognizable finge
 > **A:** `Zero day`
 
 📸 *Screenshot: Exploitation task completion*  
-![Exploitation](TryHackMe/Cyber kill chain/Screenshots/04-exploitation zeroday.png)
+![Exploitation](Screenshots/04-exploitation-zeroday.png)
 
 ---
 
@@ -150,7 +150,7 @@ One technique I found particularly clever: **Timestomping**. This modifies file 
 > **A:** `Web shell`
 
 📸 *Screenshot: Installation task completion*  
-![Installation](TryHackMe/Cyber kill chain/Screenshots/05-installation-persistence.png)
+![Installation](Screenshots/05-installation-persistence.png)
 
 ---
 
@@ -172,7 +172,7 @@ Detecting abnormal DNS query volumes or unusual domain patterns is a key behavio
 > **A:** `DNS Tunneling`
 
 📸 *Screenshot: C2 task completion*  
-![C2](TryHackMe/Cyber kill chain/Screenshots/06-c2-dns-tunneling.png)
+![C2](Screenshots/06-c2-dns-tunneling.png)
 
 ---
 
@@ -195,7 +195,7 @@ The deletion of Shadow Copies is a signature ransomware tactic. it ensures victi
 > **A:** `Shadow copy`
 
 📸 *Screenshot: Actions on Objectives task completion*  
-![Actions on Objectives](TryHackMe/Cyber kill chain/Screenshots/07-actions-shadowcopy.png)
+![Actions on Objectives](Screenshots/07-actions-shadowcopy.png)
 
 ---
 
