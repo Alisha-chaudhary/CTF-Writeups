@@ -1,4 +1,4 @@
-# 🔗 Cyber Kill Chain — TryHackMe Writeup
+# 🔗 Cyber Kill Chain - TryHackMe Writeup
 
 **Room:** [Cyber Kill Chain](https://tryhackme.com/room/cyberkillchainzmt)  
 **Platform:** TryHackMe  
@@ -26,9 +26,9 @@ This room also connects directly to my work in threat intelligence, where mappin
 
 ---
 
-## 🗺️ The Kill Chain — Phase by Phase
+## 🗺️ The Kill Chain - Phase by Phase
 
-### Phase 1 — Reconnaissance
+### Phase 1 - Reconnaissance
 
 *Reconnaissance is the foundation of precision attacks, where intelligence shapes opportunity.*
 
@@ -55,11 +55,11 @@ Email harvesting stood out to me as particularly dangerous here. An attacker who
 > **A:** `Email harvesting`
 
 📸 *Screenshot: OSINT Framework tool interface*  
-![OSINT Framework](screenshots/01-recon-osint-framework.png)
+![OSINT Framework](TryHackMe/Cyber kill chain/Screenshots/01-recon-osint-framework.png)
 
 ---
 
-### Phase 2 — Weaponization
+### Phase 2 - Weaponization
 
 Once attackers gather sufficient intelligence, they weaponize that information offline, preparing their attack before ever engaging with the victim. This is where malware, exploits, and payloads are crafted or purchased, often from underground markets.
 
@@ -81,11 +81,11 @@ The macro technique is particularly effective because Office documents feel rout
 > **A:** `Macro`
 
 📸 *Screenshot: Weaponization task completion*  
-![Weaponization](screenshots/02-weaponization-macro.png)
+![Weaponization](TryHackMe/Cyber kill chain/Screenshots/02-weaponization-macro.png)
 
 ---
 
-### Phase 3 — Delivery
+### Phase 3 - Delivery
 
 Delivery is how the weaponized payload reaches the victim. Even the most sophisticated malware is useless until it lands on a target machines so this phase is a critical choke point for defenders.
 
@@ -101,11 +101,11 @@ Successful watering hole attacks are built on meticulous research into where a t
 > **A:** `Watering hole attack`
 
 📸 *Screenshot: Delivery task completion*  
-![Delivery](screenshots/03-delivery-watering-hole.png)
+![Delivery](TryHackMe/Cyber kill chain/Screenshots/03-delivery watering hole.png)
 
 ---
 
-### Phase 4 — Exploitation
+### Phase 4 - Exploitation
 
 This is the moment the attacker's code runs. Exploitation leverages a vulnerability to gain initial access on the target system.
 
@@ -125,11 +125,11 @@ Zero-days are a reminder that not every threat arrives with a recognizable finge
 > **A:** `Zero day`
 
 📸 *Screenshot: Exploitation task completion*  
-![Exploitation](screenshots/04-exploitation-zeroday.png)
+![Exploitation](TryHackMe/Cyber kill chain/Screenshots/04-exploitation zeroday.png)
 
 ---
 
-### Phase 5 — Installation
+### Phase 5 - Installation
 
 Breaking through the door is not the end goal. In the installation phase, attackers establish persistence by creating mechanisms such as scheduled tasks, startup entries, services, or hidden backdoors that allow them to regain access later.
 The objective is to maintain a foothold within the environment, even after the original intrusion vector has been discovered and remediated.
@@ -150,11 +150,11 @@ One technique I found particularly clever: **Timestomping**. This modifies file 
 > **A:** `Web shell`
 
 📸 *Screenshot: Installation task completion*  
-![Installation](screenshots/05-installation-persistence.png)
+![Installation](TryHackMe/Cyber kill chain/Screenshots/05-installation-persistence.png)
 
 ---
 
-### Phase 6 — Command & Control (C2)
+### Phase 6 - Command & Control (C2)
 
 With persistence established, the attacker opens a **C2 channel** - a communication line between the compromised host and their server. This is also called **C2 beaconing** because the infected machine periodically checks in with the attacker.
 
@@ -172,11 +172,11 @@ Detecting abnormal DNS query volumes or unusual domain patterns is a key behavio
 > **A:** `DNS Tunneling`
 
 📸 *Screenshot: C2 task completion*  
-![C2](screenshots/06-c2-dns-tunneling.png)
+![C2](TryHackMe/Cyber kill chain/Screenshots/06-c2-dns-tunneling.png)
 
 ---
 
-### Phase 7 — Actions on Objectives
+### Phase 7 - Actions on Objectives
 
 This is the point where preparation turns into impact. After investing time in gaining access and maintaining a foothold, the attacker finally executes the mission they set out to accomplish.
 
@@ -195,11 +195,11 @@ The deletion of Shadow Copies is a signature ransomware tactic. it ensures victi
 > **A:** `Shadow copy`
 
 📸 *Screenshot: Actions on Objectives task completion*  
-![Actions on Objectives](screenshots/07-actions-shadowcopy.png)
+![Actions on Objectives](TryHackMe/Cyber kill chain/Screenshots/07-actions-shadowcopy.png)
 
 ---
 
-## 🎯 Practical — Target Data Breach (2013) Kill Chain
+## 🎯 Practical - Target Data Breach (2013) Kill Chain
 
 This was where the framework moved from theory to reality. By analyzing the 2013 Target breach through the Cyber Kill Chain, each phase became tangible. 
 The attack exposed approximately 40 million credit and debit card accounts between November 27 and December 15, 2013, and ultimately resulted in $18.5 million in settlements, the largest data breach settlement of its era.
@@ -248,7 +248,7 @@ This is what the entire attack was building toward, pulling credit and debit car
 | Actions on Objectives  | `data from local system`            |
 
 📸 *Screenshot: Completed Target breach Kill Chain on static site*  
-![Target Breach Kill Chain](screenshots/08-target-breach-killchain-complete.png)
+![Target Breach Kill Chain](TryHackMe/Cyber kill chain/Screenshots/08-target-breach-killchain-complete.png)
 
 > 🏁 **Flag:** `THM{7HR347_1N73L_12_4w35om3}`
 
@@ -276,19 +276,19 @@ and one that matters a lot when communicating findings to non-technical stakehol
 
 ## 🛠️ Tools & Techniques Encountered
 
-| Tool / Technique | Category | Purpose |
-|-----------------|----------|---------|
-| `theHarvester` | OSINT / Recon | Email, subdomain, IP enumeration from public sources |
-| `Hunter.io` | OSINT / Recon | Domain-based contact discovery |
-| OSINT Framework | OSINT / Recon | Consolidated OSINT tool directory |
-| Malicious Macros (VBA) | Weaponization | Payload delivery via Office documents |
-| Meterpreter | Installation / C2 | Interactive remote shell via Metasploit |
-| Timestomping (`T1070.006`) | Defense Evasion | Modifying file timestamps to evade forensic analysis |
-| Web Shell | Persistence | Remote server access via planted script |
-| DNS Tunneling | C2 | Covert communication hidden within DNS traffic |
-| PowerShell | Execution | Native Windows tool used for post-exploitation commands |
-| Dynamic Linker Hijacking | Installation | Disguising malware as a legitimate system file |
-| Shadow Copy deletion | Actions on Objectives | Destroying backup snapshots to prevent recovery |
+| Tool / Technique           | Category                 | Purpose                                                 |
+|----------------------------|--------------------------|---------------------------------------------------------|
+| `theHarvester`             | OSINT / Recon            | Email, subdomain, IP enumeration from public sources    |
+| `Hunter.io`                | OSINT / Recon            | Domain-based contact discovery                          |
+| OSINT Framework            | OSINT / Recon            | Consolidated OSINT tool directory                       |
+| Malicious Macros (VBA)     | Weaponization            | Payload delivery via Office documents                   |
+| Meterpreter                | Installation / C2        | Interactive remote shell via Metasploit                 |
+| Timestomping (`T1070.006`) | Defense Evasion          | Modifying file timestamps to evade forensic analysis    |
+| Web Shell                  | Persistence              | Remote server access via planted script                 |
+| DNS Tunneling              | C2                       | Covert communication hidden within DNS traffic          |
+| PowerShell                 | Execution                | Native Windows tool used for post-exploitation commands |
+| Dynamic Linker Hijacking   | Installation             | Disguising malware as a legitimate system file          |
+| Shadow Copy deletion       | Actions on Objectives    | Destroying backup snapshots to prevent recovery         |
 
 ---
 
